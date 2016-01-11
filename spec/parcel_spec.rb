@@ -26,7 +26,15 @@ describe(Parcel) do
   describe('#cost_to_ship') do
     it('calculates total cost of delivery') do
       package = Parcel.new(2,2,2,2)
-      expect(package.cost_to_ship(10)).to(eq(20))
+      expect(package.cost_to_ship(10)).to(eq("$20.0"))
     end
   end
+
+  describe('#wrapping') do
+    it('calculates wrapping cost based on surface area') do
+      package = Parcel.new(2,2,2,2)
+      expect(package.wrapping()).to(eq(12))
+    end
+  end
+
 end

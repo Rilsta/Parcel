@@ -16,5 +16,9 @@ get('/parcel') do
   weight = params.fetch('weight')
   miles = params.fetch('miles')
   @parcel = Parcel.new(length, width, height, weight).cost_to_ship(miles)
+  # 
+  # @gift_wrapped = @parcel + @parcel.wrapping()
+  #
+  # wrapped = params.fetch('wrapping')
   erb(:parcel)
 end

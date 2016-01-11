@@ -14,10 +14,18 @@ class Parcel
 
   def weight_cost()
     @weigh_cost = (@weight * 1.00)
+    return @weigh_cost
   end
 
   def shipping(mi)
     @shipping_cost = (0.20 * mi)
+  end
+#bonus giftwrap method
+  def wrapping()
+    surface_area = (2 * @length * @width) + (2 * @width * @height) + (2 * @length * @height)
+    puts surface_area
+    @wrapping_cost = surface_area * 0.50
+    return @wrapping_cost
   end
 
   def cost_to_ship(miles)
