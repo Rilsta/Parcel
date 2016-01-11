@@ -22,4 +22,11 @@ describe(Parcel) do
       expect(package.shipping(10)).to(eq(2))
     end
   end
+
+  describe('#cost_to_ship') do
+    it('calculates total cost of delivery') do
+      package = Parcel.new(2,2,2,2)
+      expect(package.cost_to_ship(10)).to(eq(20))
+    end
+  end
 end

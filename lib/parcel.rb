@@ -1,9 +1,9 @@
 class Parcel
   define_method(:initialize) do |length, width, height, weight|
-    @length = length
-    @width = width
-    @height = height
-    @weight = weight
+    @length = length.to_i
+    @width = width.to_i
+    @height = height.to_i
+    @weight = weight.to_i
     @volume = @length * @width * @height
   end
 
@@ -18,11 +18,10 @@ class Parcel
 
   def shipping(mi)
     @shipping_cost = (0.20 * mi)
-    return @shipping_cost
   end
 
-  def cost_to_ship()
-    cost = @vol_cost + @weight_cost + @shipping_cost
-    return cost
+  def cost_to_ship(miles)
+    cost = volume_cost + weight_cost + shipping(miles.to_i)
+    return "$" + cost.to_s
   end
 end
