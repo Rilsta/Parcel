@@ -30,11 +30,11 @@ describe(Parcel) do
     end
   end
 
-  describe('#wrapping') do
-    it('calculates wrapping cost based on surface area') do
-      package = Parcel.new(2,2,2,2)
-      expect(package.wrapping()).to(eq(12))
-    end
-  end
+  # describe('#wrapping') do
+  #   it('calculates wrapping cost based on surface area') do
+  #     package = Parcel.new(2,2,2,2)
+  #     expect(package.wrapping()).to(eq(12))
+  #   end
+  # end
 
 end
