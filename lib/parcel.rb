@@ -8,17 +8,17 @@ class Parcel
   end
 
   def volume_cost()
-    @vol_cost = (@volume * 2.00)
-    return @vol_cost
+    @vol_cost = (@volume * 2.00) # vol_cost doesn't need to be an instance variable
+    # return @vol_cost review: This code is redundant
   end
 
   def weight_cost()
-    @weigh_cost = (@weight * 1.00)
-    return @weigh_cost
+    @weigh_cost = (@weight * 1.00)  # weigh_cost doesn't need to be an instance variable
+    # return @weigh_cost review: This code is redundant
   end
 
   def shipping(mi)
-    @shipping_cost = (0.20 * mi)
+    @shipping_cost = (0.20 * mi) # shipping_cost doesn't need to be an instance variable
   end
 #bonus giftwrap method
   # def wrapping()
